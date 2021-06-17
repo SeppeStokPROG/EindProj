@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>HomePagina</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}" href="../static/css/bootstrap.css">
+    <link rel="stylesheet" th:href="@{/css/csseigen.css}" href="../static/css/csseigen.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script type="text/javascript" th:src="@{/js/jquery-3.2.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/popper.min.js}"></script>
+
+
+</head>
+<body>
+
+<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-success">
+    <a class="navbar-brand" href="#">
+        <img class="rounded" src="/img/logo.png" height="60" width="125"/>
+
+    </a>
+
+    <button class="navbar-toggler" type="button"
+            data-toggle="collapse"
+            data-target="#navbarGSM"
+            aria-controls="navbarGSM" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarDeAuto">
+        <div class="navbar-nav mr-auto">
+            <a class="nav-item nav-link" href="/">Home pagina<span class="sr-only">(huidig)</span></a>
+            <a class="nav-item nav-link" href="/galerij">Galerij</a>
+            <a class="nav-item nav-link" href="/contact">Contact</a>
+            <a sec:authorize="!isAuthenticated()" class="nav-item nav-link " href="/logIn">Login</a>
+            <a sec:authorize="hasAuthority('ADMIN')" class="nav-item nav-link" href="/LogOut">Logout</a></li>
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button">Nederlands</a>
+
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Engels</a>
+                <a class="dropdown-item" href="#">Frans</a>
+                <a class="dropdown-item" href="#">Duits</a>
+            </div>
+
+        </div>
+
+    </div>
+</nav>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col mt-5 cars mb-5">
+            <h1>Whoops! er ging iets fout!</h1>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+<div class="footer bg-success text-warning mt-5 text-center">
+    <footer>© Seppe Stok 2020-2021</footer>
+</div>
+
+</body>
+</html>

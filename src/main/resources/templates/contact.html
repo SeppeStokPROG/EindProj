@@ -1,0 +1,189 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>HomePagina</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}" href="../static/css/bootstrap.css">
+    <link rel="stylesheet" th:href="@{/css/csseigen.css}" href="../static/css/csseigen.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script type="text/javascript" th:src="@{/static/js/jquery-3.2.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{/static/js/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:src="@{/static/js/popper.min.js}"></script>
+
+
+</head>
+<body>
+
+<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-success">
+    <a class="navbar-brand" href="#">
+        <img class="rounded" src="/img/logo.png" height="60" width="125"/>
+
+    </a>
+
+    <button class="navbar-toggler" type="button"
+            data-toggle="collapse"
+            data-target="#navbarGsm"
+            aria-controls="navbarGsm" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarGSM">
+        <div class="navbar-nav mr-auto">
+            <a class="nav-item nav-link" href="/">Home pagina<span class="sr-only">(huidig)</span></a>
+            <a class="nav-item nav-link" href="#contact">Contact</a>
+            <a class="nav-item nav-link" href="#formulier">Formulier</a>
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button">Nederlands</a>
+
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Engels</a>
+                <a class="dropdown-item" href="#">Frans</a>
+                <a class="dropdown-item" href="#">Duits</a>
+            </div>
+
+        </div>
+
+    </div>
+</nav>
+
+
+<div class="container-fluid">
+
+    <p class="porbleemopgelost" id="contact"></p>
+
+    <div class="contact">
+
+        <div class="row text-center mb-4">
+            <div class="col-md mt-5">
+                <h3>Contact</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md text-center">
+                <h6>Seppe Stok</h6>
+                <h6>04 77 77 77 77</h6>
+                <h6>Rijmenam</h6>
+            </div>
+        </div>
+
+
+        <div class="row mb-5">
+            <div class="col-md text-center">
+                <a class="facebook" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a class="instagram" href="https://www.instagram.com" target="_blank"> <i
+                        class="fab fa-instagram"></i></a>
+                <a class="mail" href="mailto:seppe.stok321@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <hr>
+
+
+        <div class="row mb-5">
+            <div class="col-md text-center">
+                <div class="googlemaps">
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2510.745874853708!2d4.589263194291878!3d51.002367994609095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3e186ce1f97cd%3A0xfe55e8c77ad2f1e9!2sSint-Jansstraat%2037%2C%202820%20Bonheiden!5e0!3m2!1snl!2sbe!4v1623943331663!5m2!1snl!2sbe" width="400" height="320" frameborder="0" style="border:0;" allowfullscreen=""
+                            aria-hidden="false" tabindex="0"></iframe>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <div class="formulier">
+        <p class="porbleemopgelost" id="formulier"></p>
+        <div class="row text-center mb-4 mt-5">
+            <div class="col-md mt-3">
+
+                <h3>Formulier</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h2>Vragen?</h2>
+
+                <form class="needs-validation" novalidate>
+                    <div class="form-row">
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom01">Voornaam</label>
+                            <input type="text" class="form-control" id="validationCustom01" placeholder="Voornaam"
+                                   value="" required>
+
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom02">Achternaam</label>
+                            <input type="text" class="form-control" id="validationCustom02" placeholder="Achternaam"
+                                   value="" required>
+
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustomUsername">Gebruikersnaam</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                </div>
+                                <input type="text" class="form-control" id="validationCustomUsername"
+                                       placeholder="Username"
+                                       aria-describedby="inputGroupPrepend" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-3 mb-3">
+                            <label for="validationCustom03">Land</label>
+                            <input type="text" class="form-control" id="validationCustom03" placeholder="Land" required>
+
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="validationCustom04">Stad</label>
+                            <input type="text" class="form-control" id="validationCustom04" placeholder="Stad"
+                                   required>
+
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="validationCustom04">Vraag</label>
+                            <input type="text" class="form-control" id="validationCustom06" placeholder="Vraag"
+                                   required>
+
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label" for="invalidCheck">
+                                Aanvaarden van condities
+                            </label>
+
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="col-md-12 text-center">
+                            <button class="btn btn-warning" type="submit">Versturen</button>
+                        </div>
+                    </div>
+                </form>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+<div class="footer bg-success text-warning mt-5 text-center">
+    <footer>© Seppe Stok 2020-2021</footer>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>HomePagina</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}" href="../static/css/bootstrap.css">
+    <link rel="stylesheet" th:href="@{/css/csseigen.css}" href="../static/css/csseigen.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script type="text/javascript" th:src="@{/js/jquery-3.2.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/popper.min.js}"></script>
+
+
+</head>
+<body>
+
+<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-success">
+    <a class="navbar-brand" href="#">
+        <img class="rounded" src="/img/logo.png" height="60" width="125"/>
+
+    </a>
+
+    <button class="navbar-toggler" type="button"
+            data-toggle="collapse"
+            data-target="#navbarGSM"
+            aria-controls="navbarGSM" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarGSM">
+        <div class="navbar-nav mr-auto">
+            <a class="nav-item nav-link" href="#overons">Over ons<span class="sr-only">(huidig)</span></a>
+            <a class="nav-item nav-link" href="#besturingssystemen">Besturingssytemen</a>
+            <a class="nav-item nav-link" href="/galerij">Galerij</a>
+            <a class="nav-item nav-link" href="/contact">Contact</a>
+            <a sec:authorize="!isAuthenticated()" class="nav-item nav-link " href="/logIn">Login</a>
+            <a sec:authorize="hasAuthority('ADMIN')" class="nav-item nav-link" href="/LogOut">Logout</a></li>
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button">Nederlands</a>
+
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Engels</a>
+                <a class="dropdown-item" href="#">Frans</a>
+                <a class="dropdown-item" href="#">Duits</a>
+            </div>
+
+        </div>
+
+    </div>
+</nav>
+
+<div class="jumbotron-fluid bg-secondary mt-5 text-center">
+    <div class="container-fluid">
+        <br>
+        <br>
+        <h1 class="display-3">The Phone Doctor</h1>
+
+        <p class="lead font-italic">Stel gerust eventuele vragen</p>
+
+        <p class="lead">
+            <a class="btn bg-warning btn-lg text-dark" href="/contact" role="button">Contact</a>
+        </p>
+        <br>
+        <br>
+    </div>
+</div>
+
+
+<div class="container-fluid">
+
+    <p class="porbleemopgelost" id="overons"></p>
+    <div class="overons">
+
+
+        <div class="row mb-5">
+            <div class="col-md text-center">
+
+                <h1>Over ons</h1>
+                <br>
+                <p>Op onze website vindt u meer informatie over de verschillende besturingssystemen
+                    <br>Kijk gerust eens rond.</p>
+
+            </div>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="soorten">
+        <p class="porbleemopgelost" id="besturingssystemen"></p>
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1>Besturingssystemen</h1>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 mt-5 text-center">
+                <h4>Soorten</h4>
+            </div>
+
+        </div>
+        <div class="row">
+
+            <div class="col-md mt-2 text-center">
+
+                <button class="btn" data-toggle="collapse"
+                        data-target="#IOS"><img
+                        src="https://i.pinimg.com/originals/95/84/d5/9584d5e3baae3add6ffa57e6bd34587b.jpg" height="100" width="100"/>
+                </button>
+                <div class="collapse" id="IOS" style="border:1px solid black; padding: 1rem;">
+                    <h4>IOS</h4>
+                    <p>
+                        IOS (voor juni 2010 iPhone OS) is het besturingssysteem van de iPhone en iPod touch. Het wordt ontwikkeld door Apple.
+                        Het is het op een na meest gebruikte besturingssysteem op smartphones.
+                        Er zijn ruim 1.400.000 apps beschikbaar in de App Store van Apple,
+                        waaruit gebruikers software kunnen downloaden om nieuwe functionaliteit toe te voegen aan het OS.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="col-md mt-2 text-center">
+
+                <button class="btn" data-toggle="collapse"
+                        data-target="#Android"><img
+                        src="https://www.agconnect.nl/sites/ag/files/Android-logo_tcm16-1232684.jpg" height="100" width="100"/>
+                </button>
+                <div class="collapse" id="Android" style="border:1px solid black; padding: 1rem;">
+                    <h4>Android</h4>
+                    <p>
+                        Android is een opensourceplatform en besturingssysteem voor mobiele telefoons,
+                        tablet-pc's, camera's en meer, gebaseerd op de Linuxkernel en het Java-programmeerplatform.
+                        In april 2013 werden er meer dan 1,5 miljoen Androidtelefoons per dag geactiveerd en Android is daarmee het meest verkochte besturingssysteem op mobiele telefoons .
+                        In totaal zijn er in mei 2013 meer dan 900 miljoen Androidapparaten geactiveerd
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="col-md mt-2 text-center">
+
+
+                <button class="btn" data-toggle="collapse"
+                        data-target="#windows"><img
+                        src="https://img2.freepng.es/20180330/uwq/kisspng-microsoft-lumia-iphone-windows-phone-8-windows-logos-5abe3794ca87a4.3605497815224155088296.jpg" height="100" width="100" />
+                </button>
+                <div class="collapse" id="windows" style="border:1px solid black; padding: 1rem;">
+                    <h4>Windows</h4>
+                    <p>
+                        Windows Phone (afgekort WP) is een besturingssysteem van Microsoft, bedoeld voor smartphones en tablets.
+                        Toestellen met Windows Phone zijn sinds 21 oktober 2010 verkrijgbaar, hoewel het besturingssysteem pas medio 2011 in Nederland en België officieel is geïntroduceerd.
+                        Dit is omdat het besturingssysteem enkel in de 'EFIGS'-talen (Engels, Frans, Italiaans, Duits en Spaans) beschikbaar was voordat de Mango-update uitkwam.
+                        Microsoft presenteerde het besturingssysteem voor het eerst in 2010 tijdens het Mobile World Congress in Barcelona.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <hr>
+
+    <div class="gsms">
+        <p class="porbleemopgelost" id="gsms"></p>
+
+
+        <div class="row">
+            <div class="col-md text-center">
+                <div th:each="Gsms:${gsms}">
+
+                    <h1 th:text="${Gsms.gsmName}">Gsm name</h1>
+                    <br>
+                    <br>
+                    <img class="img-fluid w-25" th:src="${Gsms.gsmLogo}" alt="logoGsm"/>
+                    <br>
+                    <br>
+                   <img class="img-fluid w-50" th:src="${Gsms.gsmPicture}" alt="pictureGsm"/>
+                    <br>
+                    <br>
+                    <h5 th:text="${Gsms.gsmInformation}">Gsm information</h5>
+                    <br>
+                    <br>
+                    <a th:href="'/meerInfo/'+${Gsms.id}" href="/gsmInformation.html">
+                        <button type="button" class="btn btn-warning">Meer info</button>
+                    </a>
+                    <br>
+                    <br>
+
+                    <a th:href="'/gsmVideo/'+${Gsms.id}" href="/gsmVideoPage.html">
+                        <button type="button" class="btn btn-warning">Video's</button>
+                    </a>
+                    <br>
+                    <br>
+                    <hr>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+<div class="footer bg-success text-warning mt-5 text-center">
+    <footer>© Seppe Stok 2020-2021</footer>
+
+</div>
+
+</body>
+</html>
